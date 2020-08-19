@@ -10,7 +10,7 @@ def load_data(data_folder):
         next(reader)
         for row in reader:
             yield dict_sweep({
-                "_id": row[0].replace(':', '_') + '-' + row[4].replace(':', '_'),
+                "_id": row[0].replace(':', '_') + '-' + row[4].replace(':', '_') + '-' + row[11].replace(':', '_').replace('NA', '') + '-' + row[13].replace(':', '_').replace('NA', ''),
                 "subject": {
                     "id": row[0],
                     "HGNC": int(row[0].split(':')[-1]),
