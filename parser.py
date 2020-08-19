@@ -15,13 +15,15 @@ def load_data(data_folder):
                     "id": row[0],
                     "HGNC": int(row[0].split(':')[-1]),
                     "NCBIGene": int(row[1]),
-                    "SYMBOL": row[2]
+                    "SYMBOL": row[2],
+                    "type": "gene"
                 },
                 "object": {
                     "id": row[4],
                     "HGNC": int(row[4].split(':')[-1]),
                     "NCBIGene": int(row[5]),
-                    "SYMBOL": row[6]
+                    "SYMBOL": row[6],
+                    "type": "gene"
                 },
                 "association": {
                     "edge_label": row[3],
